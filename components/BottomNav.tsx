@@ -23,10 +23,11 @@ export default function BottomNav({ currentPage, onPageChange }: BottomNavProps)
               key={item.id}
               onClick={() => onPageChange(item.id)}
               className={`flex flex-col items-center py-2 px-4 rounded-lg transition-all duration-200 ${
-                isActive
-                  ? "text-primary scale-105"
-                  : "text-gray-400 hover:text-gray-600"
+                isActive ? "scale-105" : ""
               }`}
+              style={{
+                color: isActive ? '#1E88E5' : '#9CA3AF'
+              }}
             >
               <Icon
                 size={22}

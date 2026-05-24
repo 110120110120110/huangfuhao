@@ -14,11 +14,11 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       {currentPage === "compass" && <CompassPage />}
       {currentPage === "calibration" && <CalibrationPage />}
       {currentPage === "settings" && <SettingsPage />}
       <BottomNav currentPage={currentPage} onPageChange={handlePageChange} />
-    </>
+    </div>
   );
 }
